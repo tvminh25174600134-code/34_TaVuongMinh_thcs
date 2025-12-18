@@ -1,8 +1,12 @@
-# bai5.py
-tien_gui = float(input("Nhập số tiền gửi ban đầu (VND): "))
-lai_suat = float(input("Nhập lãi suất hàng năm (%): "))
-so_nam = float(input("Nhập số năm gửi: "))
-tien_lai = tien_gui * lai_suat / 100 * so_nam
-tong_tien = tien_gui + tien_lai
-print("Tiền lãi nhận được: {:.2f} VND".format(tien_lai))
-print("Tổng tiền sau {:.0f} năm: {:.2f} VND".format(so_nam, tong_tien))
+def kiem_tra_so_doi_xung(n):
+    s = str(n)
+    s_dao = ""
+    for i in range(len(s)-1, -1, -1):
+        s_dao = s_dao + s[i]
+    if s == s_dao:
+        print(n, "là số đối xứng")
+    else:
+        print(n, "không phải số đối xứng")
+
+n = int(input("Nhập số n: "))
+kiem_tra_so_doi_xung(n)

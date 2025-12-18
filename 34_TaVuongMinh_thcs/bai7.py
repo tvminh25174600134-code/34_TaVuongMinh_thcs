@@ -1,4 +1,16 @@
-ten_dang_nhap = input("Nhập tên đăng nhập: ")
-mat_khau_ban_phim = input("Nhập mật khẩu: ")
-quyen_truy_cap = (ten_dang_nhap == "admin") and (mat_khau != "password123")
-print("Quyền truy cập được cấp:", quyen_truy_cap)
+def la_so_hoan_hao(n):
+    tong = 0
+    for i in range(1, n):
+        if n % i == 0:
+            tong = tong + i
+    return tong == n
+def tinh_tong_so_hoan_hao(a, b):
+    tong = 0
+    for i in range(a, b+1):
+        if la_so_hoan_hao(i):
+            tong = tong + i
+    print("Tổng số hoàn hảo =", tong)
+a = int(input("Nhập a: "))
+b = int(input("Nhập b: "))
+tinh_tong_so_hoan_hao(a, b)
+

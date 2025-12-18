@@ -1,4 +1,17 @@
-nam = int(input("Nhập một năm: "))
-nam_nhuan = (nam % 400 == 0) or (nam % 4 == 0) and (nam % 100 !=0)
-print("Năm", nam, "là năm nhuận:", nam_nhuan)
-print("Năm", nam, "không phải là năm nhuận:", not la_nam_nhuan)
+def la_so_nguyen_to(n):
+    if n < 2:
+        return False
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True
+
+def in_so_nguyen_to_trong_khoang(a, b):
+    print("Các số nguyên tố:")
+    for i in range(a, b+1):
+        if la_so_nguyen_to(i):
+            print(i)
+
+a = int(input("Nhập a: "))
+b = int(input("Nhập b: "))
+in_so_nguyen_to_trong_khoang(a, b)

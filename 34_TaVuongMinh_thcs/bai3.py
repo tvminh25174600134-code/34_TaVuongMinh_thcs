@@ -1,6 +1,12 @@
-# bai3.py
-a = float(input("Nhập độ dài cạnh đáy (cm): "))
-h = float(input("Nhập chiều cao (cm): "))
+def kiem_tra_so_armstrong(n):
+    s = str(n)
+    tong = 0
+    for i in s:
+        tong = tong + int(i)**3
+    if tong == n:
+        print(n, "là số Armstrong")
+    else:
+        print(n, "không phải số Armstrong")
 
-dien_tich = 0.5 * a * h
-print("Diện tích tam giác là: {:.2f} cm²".format(dien_tich))
+n = int(input("Nhập số n: "))
+kiem_tra_so_armstrong(n)

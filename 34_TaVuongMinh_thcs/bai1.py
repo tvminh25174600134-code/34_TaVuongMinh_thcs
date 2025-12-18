@@ -1,7 +1,6 @@
-# bai1.py
-gia = float(input("Nhập giá sản phẩm: "))
-so_luong = int(input("Nhập số lượng mua: "))
-tong = gia * so_luong
-vat = tong * 0.1
-tong_tien = tong + vat
-print("Tổng tiền phải trả: {:.2f} VND".format(tong_tien))
+def chuyen_doi_nhiet_do(do_c):
+    do_f = do_c * 9/5 + 32
+    print(do_c, "độ C =", do_f, "độ F")
+    return do_f
+c = float(input("Nhập độ C: "))
+chuyen_doi_nhiet_do(c)

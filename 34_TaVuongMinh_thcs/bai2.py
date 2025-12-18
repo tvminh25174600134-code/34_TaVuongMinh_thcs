@@ -1,9 +1,14 @@
-# bai2.py
-tong_keo = int(input("Nhập tổng số kẹo: "))
-so_hoc_sinh = int(input("Nhập số học sinh: "))
 
-keo_moi_ban = tong_keo // so_hoc_sinh
-keo_thua = tong_keo % so_hoc_sinh
+def giai_phuong_trinh_bac_nhat(a, b):
+    if a == 0:
+        if b == 0:
+            print("Phương trình vô số nghiệm")
+        else:
+            print("Phương trình vô nghiệm")
+    else:
+        x = -b / a
+        print("Nghiệm của phương trình là:", x)
 
-print("Mỗi học sinh nhận được: {} kẹo".format(keo_moi_ban))
-print("Số kẹo còn thừa: {}".format(keo_thua))
+a = float(input("Nhập a: "))
+b = float(input("Nhập b: "))
+giai_phuong_trinh_bac_nhat(a, b)
